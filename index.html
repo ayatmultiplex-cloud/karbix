@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
@@ -289,4 +289,242 @@ let parties={};db.transactions.forEach(t=>{let x=parties[t.party]||(parties[t.pa
 function exportCSV(){let lines=[['Date','Type','Product','Party','Quantity','Unit','Rate BDT','Total BDT','Paid BDT','Due BDT'],...db.transactions.map(t=>[t.date,t.type,t.product,t.party,t.qty,t.unit,t.rate,t.total,t.paid,t.due])];let csv='\uFEFF'+lines.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='gauchia-traders-backup.csv';a.click();URL.revokeObjectURL(a.href)}
 render();renderIcRows();
 </script>
+
+<!-- KARBiX AUTHENTICATION -->
+<style>
+body:not(.kx-authenticated)>header,
+body:not(.kx-authenticated)>.wrap{
+  display:none!important;
+}
+.kx-auth{
+  max-width:440px;
+  margin:45px auto;
+  padding:22px;
+  background:linear-gradient(145deg,#142d45,#0b1b2c);
+  border:1px solid #bd9449;
+  border-radius:20px;
+  color:#edf4fa;
+  font-family:system-ui,sans-serif;
+  box-shadow:0 15px 40px #0005;
+}
+.kx-auth h2{color:#f0d28a;margin-top:0}
+.kx-auth input{
+  display:block;width:100%;padding:13px;
+  margin:8px 0 13px;border-radius:10px;
+  background:#091827;color:white;
+  border:1px solid #35516b;
+  box-sizing:border-box;
+}
+.kx-auth button{
+  padding:12px 15px;border-radius:10px;
+  border:1px solid #bd9449;
+  background:linear-gradient(120deg,#bd9449,#f0d28a);
+  color:#091827;font-weight:800;cursor:pointer;
+}
+.kx-auth .kx-secondary{
+  background:#142e46;color:white;
+  border-color:#3a5872;margin-left:5px;
+}
+.kx-auth p{color:#b8c9d8;font-size:13px}
+#kxMessage{overflow-wrap:anywhere}
+</style>
+
+<div class="kx-auth" id="kxAuth">
+  <h2>Karbix</h2>
+  <p>SMART BUSINESS PARTNER</p>
+
+  <h3>নতুন অ্যাকাউন্ট তৈরি</h3>
+  <form id="kxRegister">
+    <input id="kxName" placeholder="আপনার নাম" required>
+    <input id="kxBusiness" placeholder="ব্যবসার নাম" value="Gauchia Traders" required>
+    <input id="kxRegEmail" type="email" placeholder="ইমেইল" required>
+    <input id="kxRegPass" type="password" minlength="6" placeholder="পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)" required>
+    <button type="submit">Register</button>
+  </form>
+
+  <hr style="border-color:#304d67;margin:22px 0">
+
+  <h3>আগের অ্যাকাউন্টে Login</h3>
+  <form id="kxLogin">
+    <input id="kxLoginEmail" type="email" placeholder="ইমেইল" required>
+    <input id="kxLoginPass" type="password" placeholder="পাসওয়ার্ড" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <p id="kxMessage">অ্যাকাউন্ট তৈরি করুন অথবা Login করুন।</p>
+  <button class="kx-secondary" id="kxLogout" style="display:none">Logout</button>
+</div>
+
+<script>
+(async function(){
+  const PROJECT_URL='https://ddbxvgvythgekoilgdml.supabase.co';
+
+  // এখানে আপনার Supabase anon/public key বসাবেন।
+  const PUBLIC_KEY='sb_publishable_anfhjvfQ5G7krVyxiLma-A_-eHd1omY';
+
+  const msg=document.getElementById('kxMessage');
+  const authBox=document.getElementById('kxAuth');
+  const logout=document.getElementById('kxLogout');
+  let sb;
+  let activeUser='';
+
+  function message(t){msg.textContent=t}
+
+  try{
+    if(!window.supabase){
+      await new Promise((resolve,reject)=>{
+        const s=document.createElement('script');
+        s.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+        s.onload=resolve;
+        s.onerror=reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    if(PUBLIC_KEY.includes('PASTE_')){
+      message('প্রথমে Supabase anon/public key বসাতে হবে।');
+      return;
+    }
+
+    sb=window.supabase.createClient(PROJECT_URL,PUBLIC_KEY);
+
+    async function setupAccount(user){
+      if(!user || activeUser===user.id)return;
+      activeUser=user.id;
+      message('আপনার Business Account প্রস্তুত হচ্ছে...');
+
+      try{
+        const {data:profile,error:profileError}=await sb
+          .from('profiles').select('id')
+          .eq('id',user.id).maybeSingle();
+
+        if(profileError)throw profileError;
+
+        if(!profile){
+          const {error}=await sb.from('profiles').insert({
+            id:user.id,
+            full_name:user.user_metadata?.full_name||''
+          });
+          if(error)throw error;
+        }
+
+        let {data:membership,error:memberError}=await sb
+          .from('business_members')
+          .select('business_id')
+          .eq('user_id',user.id)
+          .limit(1).maybeSingle();
+
+        if(memberError)throw memberError;
+
+        let business;
+
+        if(!membership){
+          const {data:newBusiness,error:createError}=await sb
+            .from('businesses')
+            .insert({
+              name:user.user_metadata?.business_name||'Gauchia Traders',
+              owner_id:user.id
+            })
+            .select('id,name').single();
+
+          if(createError)throw createError;
+          business=newBusiness;
+
+          const {error:joinError}=await sb
+            .from('business_members')
+            .insert({
+              business_id:business.id,
+              user_id:user.id,
+              role:'owner'
+            });
+
+          if(joinError)throw joinError;
+        }else{
+          const {data:existing,error}=await sb
+            .from('businesses')
+            .select('id,name')
+            .eq('id',membership.business_id)
+            .single();
+
+          if(error)throw error;
+          business=existing;
+        }
+
+        document.body.classList.add('kx-authenticated');
+        authBox.querySelector('h2').textContent='Karbix • '+business.name;
+        document.querySelector('.brand-account').textContent=
+          '• '+business.name+' Account';
+        logout.style.display='inline-block';
+        message('Login সফল। Business Account: '+business.name);
+
+      }catch(err){
+        activeUser='';
+        message('Account setup সমস্যা: '+(err.message||'আবার চেষ্টা করুন'));
+      }
+    }
+
+    document.getElementById('kxRegister').addEventListener('submit',async e=>{
+      e.preventDefault();
+      message('অ্যাকাউন্ট তৈরি হচ্ছে...');
+
+      const {data,error}=await sb.auth.signUp({
+        email:document.getElementById('kxRegEmail').value.trim(),
+        password:document.getElementById('kxRegPass').value,
+        options:{
+          data:{
+            full_name:document.getElementById('kxName').value.trim(),
+            business_name:document.getElementById('kxBusiness').value.trim()
+          }
+        }
+      });
+
+      if(error){message(error.message);return;}
+
+      if(data.session){
+        await setupAccount(data.user);
+      }else{
+        message('ইমেইল যাচাই করুন। তারপর Login করুন।');
+      }
+    });
+
+    document.getElementById('kxLogin').addEventListener('submit',async e=>{
+      e.preventDefault();
+      message('Login হচ্ছে...');
+
+      const {data,error}=await sb.auth.signInWithPassword({
+        email:document.getElementById('kxLoginEmail').value.trim(),
+        password:document.getElementById('kxLoginPass').value
+      });
+
+      if(error){message(error.message);return;}
+      await setupAccount(data.user);
+    });
+
+    logout.addEventListener('click',async()=>{
+      await sb.auth.signOut();
+      activeUser='';
+      document.body.classList.remove('kx-authenticated');
+      logout.style.display='none';
+      message('আপনি Logout করেছেন।');
+    });
+
+    const {data:{session}}=await sb.auth.getSession();
+    if(session)await setupAccount(session.user);
+
+    sb.auth.onAuthStateChange((event,session)=>{
+      if(event==='SIGNED_IN' && session){
+        Promise.resolve().then(()=>setupAccount(session.user));
+      }
+      if(event==='SIGNED_OUT'){
+        activeUser='';
+        document.body.classList.remove('kx-authenticated');
+      }
+    });
+
+  }catch(err){
+    message('সংযোগ সমস্যা: '+(err.message||'ইন্টারনেট পরীক্ষা করুন'));
+  }
+})();
+</script>
+<!-- END KARBiX AUTHENTICATION -->
 </body></html>
