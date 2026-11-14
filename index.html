@@ -30,7 +30,6 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 12px}
 .ic-admin{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 @media(max-width:760px){.ic-tools{grid-template-columns:1fr}.ic-admin{grid-template-columns:1fr}}
 
-
 /* Gauchia Traders premium navy / gold / emerald refresh */
 :root{
  --wine:#0d1b2a;--wine2:#17324b;--pink:#e9eef2;--ink:#eaf0f5;--muted:#a9b8c7;
@@ -71,7 +70,6 @@ footer{color:#8194a6}
 }
 @media(prefers-reduced-motion:reduce){.page{animation:none}.btn{transition:none}}
 
-
 /* KARBiX brand system */
 :root{
  --wine:#07111d;--wine2:#102a45;--pink:#eaf2f8;--ink:#edf4fa;--muted:#9db0c2;
@@ -108,24 +106,24 @@ footer{color:#8fa5b8}
 <header><div class="brand"><div class="mark" aria-label="Karbix logo">K</div><div><h1>Karbix</h1><p>SMART BUSINESS PARTNER <span class="brand-account">• Gauchia Traders Account</span></p></div></div></header>
 <div class="wrap">
 <nav class="nav" aria-label="প্রধান মেনু">
-<button class="active" data-page="dashboard">ড্যাশবোর্ড</button><button data-page="products">পণ্য ও স্টক</button><button data-page="purchase">ক্রয় এন্ট্রি</button><button data-page="sales">বিক্রয় এন্ট্রি</button><button data-page="parties">পার্টি হিসাব</button><button data-page="ic">IC চেনার উপায়</button><button data-page="reports">রিপোর্ট</button>
+<button class="active" data-page="dashboard">ড্যাশবোর্ড</button><button data-page="products">পণ্য ও স্টক</button><button data-page="purchase">ক্রয় এন্ট্রি</button><button data-page="sales">বিক্রয় এন্ট্রি</button><button data-page="parties">পার্টি হিসাব</button><button data-page="ic">IC চেনার উপায়</button><button data-page="reports">রিপোর্ট</button>
 </nav>
 <section id="dashboard" class="page active">
-<div class="section-title"><div><h2>ব্যবসার সারসংক্ষেপ</h2><div class="sub">আপনার Gauchia Traders-এর হিসাব এক জায়গায়</div></div><span class="pill" id="today"></span></div>
+<div class="section-title"><div><h2>ব্যবসার সারসংক্ষেপ</h2><div class="sub">আপনার Gauchia Traders-এর হিসাব এক জায়গায়</div></div><span class="pill" id="today"></span></div>
 <div class="cards">
 <div class="card"><div class="metric-label">মোট পণ্য</div><div class="metric" id="mProducts">0</div></div>
 <div class="card"><div class="metric-label">স্টক পরিমাণ (পিস)</div><div class="metric" id="mStock">0</div></div>
-<div class="card"><div class="metric-label">মোট ক্রয়</div><div class="metric" id="mPurchase">৳ 0</div></div>
-<div class="card"><div class="metric-label">মোট বিক্রয়</div><div class="metric" id="mSales">৳ 0</div></div>
+<div class="card"><div class="metric-label">মোট ক্রয়</div><div class="metric" id="mPurchase">৳ 0</div></div>
+<div class="card"><div class="metric-label">মোট বিক্রয়</div><div class="metric" id="mSales">৳ 0</div></div>
 </div>
 <div class="grid2">
-<div class="panel"><h3>দ্রুত কাজ</h3><div class="actions"><button class="btn primary" onclick="go('purchase')">＋ নতুন ক্রয়</button><button class="btn primary" onclick="go('sales')">＋ নতুন বিক্রয়</button><button class="btn" onclick="go('products')">পণ্য যোগ করুন</button></div><p class="hint">প্রথমে পণ্য যোগ করুন। এরপর ক্রয় বা বিক্রয়ের সময় তালিকা থেকে পণ্য নির্বাচন করুন।</p></div>
-<div class="panel"><h3>গুরুত্বপূর্ণ নোট</h3><p class="hint">এটি প্রথম ধাপের প্রোটোটাইপ। তথ্য এই ডিভাইসের ব্রাউজারে সংরক্ষিত হয়। অনলাইন সিঙ্ক, লগইন ও ক্লাউড ব্যাকআপ পরবর্তী ধাপে যুক্ত করা হবে। ব্রাউজারের ডেটা মুছে ফেললে তথ্য হারাতে পারে—নিয়মিত ব্যাকআপ রাখুন।</p></div>
+<div class="panel"><h3>দ্রুত কাজ</h3><div class="actions"><button class="btn primary" onclick="go('purchase')">＋ নতুন ক্রয়</button><button class="btn primary" onclick="go('sales')">＋ নতুন বিক্রয়</button><button class="btn" onclick="go('products')">পণ্য যোগ করুন</button></div><p class="hint">প্রথমে পণ্য যোগ করুন। এরপর ক্রয় বা বিক্রয়ের সময় তালিকা থেকে পণ্য নির্বাচন করুন।</p></div>
+<div class="panel"><h3>গুরুত্বপূর্ণ নোট</h3><p class="hint">এটি প্রথম ধাপের প্রোটোটাইপ। তথ্য এই ডিভাইসের ব্রাউজারে সংরক্ষিত হয়। অনলাইন সিঙ্ক, লগইন ও ক্লাউড ব্যাকআপ পরবর্তী ধাপে যুক্ত করা হবে। ব্রাউজারের ডেটা মুছে ফেললে তথ্য হারাতে পারে—নিয়মিত ব্যাকআপ রাখুন।</p></div>
 </div>
 <div class="panel"><h3>সাম্প্রতিক লেনদেন</h3><div class="tablewrap"><table><thead><tr><th>তারিখ</th><th>ধরন</th><th>পণ্য</th><th>পার্টি</th><th class="num">পরিমাণ</th><th class="num">মোট</th></tr></thead><tbody id="recent"></tbody></table></div></div>
 </section>
 <section id="products" class="page">
-<div class="section-title"><div><h2>পণ্য ও স্টক</h2><div class="sub">পিস, কেজি, মডেল ও GB অনুযায়ী পণ্য সংরক্ষণ</div></div></div>
+<div class="section-title"><div><h2>পণ্য ও স্টক</h2><div class="sub">পিস, কেজি, মডেল ও GB অনুযায়ী পণ্য সংরক্ষণ</div></div></div>
 <div class="panel"><h3>নতুন পণ্য যোগ করুন</h3><form id="productForm"><div class="formgrid">
 <div class="field"><label>পণ্যের নাম *</label><input id="pName" required placeholder="যেমন: Samsung Motherboard"></div>
 <div class="field"><label>ক্যাটাগরি</label><select id="pCategory"><option>Mobile Motherboard</option><option>Computer Motherboard</option><option>TV Motherboard</option><option>IC / Memory</option><option>DDR</option><option>eMMC</option><option>Mobile Display</option><option>Other Spare Parts</option><option>অন্যান্য</option></select></div>
@@ -133,45 +131,45 @@ footer{color:#8fa5b8}
 <div class="field"><label>স্টোরেজ / GB</label><input id="pGb" placeholder="যেমন: 64GB, 4+128"></div>
 <div class="field"><label>একক *</label><select id="pUnit"><option value="পিস">পিস</option><option value="KG">KG</option></select></div>
 <div class="field"><label>প্রাথমিক স্টক</label><input id="pOpening" type="number" min="0" step="0.001" value="0"></div>
-<div class="field"><label>ক্রয়মূল্য (৳)</label><input id="pBuy" type="number" min="0" step="0.01" value="0"></div>
-<div class="field"><label>বিক্রয়মূল্য (৳)</label><input id="pSell" type="number" min="0" step="0.01" value="0"></div>
+<div class="field"><label>ক্রয়মূল্য (৳)</label><input id="pBuy" type="number" min="0" step="0.01" value="0"></div>
+<div class="field"><label>বিক্রয়মূল্য (৳)</label><input id="pSell" type="number" min="0" step="0.01" value="0"></div>
 </div><div class="actions"><button class="btn primary" type="submit">পণ্য সংরক্ষণ</button><button class="btn" type="reset">ফর্ম পরিষ্কার</button></div></form></div>
-<div class="panel"><h3>পণ্যের তালিকা</h3><div class="tablewrap"><table><thead><tr><th>পণ্য</th><th>ক্যাটাগরি</th><th>মডেল / GB</th><th>একক</th><th class="num">স্টক</th><th class="num">ক্রয়মূল্য</th><th class="num">বিক্রয়মূল্য</th></tr></thead><tbody id="productRows"></tbody></table></div></div>
+<div class="panel"><h3>পণ্যের তালিকা</h3><div class="tablewrap"><table><thead><tr><th>পণ্য</th><th>ক্যাটাগরি</th><th>মডেল / GB</th><th>একক</th><th class="num">স্টক</th><th class="num">ক্রয়মূল্য</th><th class="num">বিক্রয়মূল্য</th></tr></thead><tbody id="productRows"></tbody></table></div></div>
 </section>
 <section id="purchase" class="page">
-<div class="section-title"><div><h2>ক্রয় এন্ট্রি</h2><div class="sub">সাপ্লায়ারের কাছ থেকে কেনা মাল লিখুন</div></div></div>
+<div class="section-title"><div><h2>ক্রয় এন্ট্রি</h2><div class="sub">সাপ্লায়ারের কাছ থেকে কেনা মাল লিখুন</div></div></div>
 <div class="panel"><form id="purchaseForm"><div class="formgrid">
 <div class="field"><label>তারিখ</label><input id="buyDate" type="date" required></div>
-<div class="field"><label>সাপ্লায়ার / বিক্রেতা</label><input id="buyParty" placeholder="নাম বা প্রতিষ্ঠানের নাম"></div>
+<div class="field"><label>সাপ্লায়ার / বিক্রেতা</label><input id="buyParty" placeholder="নাম বা প্রতিষ্ঠানের নাম"></div>
 <div class="field"><label>পণ্য *</label><select id="buyProduct" required></select></div>
 <div class="field"><label>পরিমাণ *</label><input id="buyQty" type="number" min="0.001" step="0.001" required placeholder="0"></div>
-<div class="field"><label>প্রতি এককের ক্রয়দর (৳) *</label><input id="buyRate" type="number" min="0" step="0.01" required placeholder="0.00"></div>
+<div class="field"><label>প্রতি এককের ক্রয়দর (৳) *</label><input id="buyRate" type="number" min="0" step="0.01" required placeholder="0.00"></div>
 <div class="field"><label>পরিশোধিত টাকা (৳)</label><input id="buyPaid" type="number" min="0" step="0.01" value="0"></div>
 <div class="field full"><label>নোট</label><input id="buyNote" placeholder="ঐচ্ছিক"></div>
-</div><p class="hint" id="buyTotal">মোট: ৳ 0.00</p><div class="actions"><button class="btn primary">ক্রয় সংরক্ষণ</button></div></form></div>
+</div><p class="hint" id="buyTotal">মোট: ৳ 0.00</p><div class="actions"><button class="btn primary">ক্রয় সংরক্ষণ</button></div></form></div>
 </section>
 <section id="sales" class="page">
-<div class="section-title"><div><h2>বিক্রয় এন্ট্রি</h2><div class="sub">কাস্টমারের কাছে বিক্রির হিসাব লিখুন</div></div></div>
+<div class="section-title"><div><h2>বিক্রয় এন্ট্রি</h2><div class="sub">কাস্টমারের কাছে বিক্রির হিসাব লিখুন</div></div></div>
 <div class="panel"><form id="salesForm"><div class="formgrid">
 <div class="field"><label>তারিখ</label><input id="sellDate" type="date" required></div>
 <div class="field"><label>কাস্টমার / ক্রেতা</label><input id="sellParty" placeholder="নাম বা প্রতিষ্ঠানের নাম"></div>
 <div class="field"><label>পণ্য *</label><select id="sellProduct" required></select></div>
 <div class="field"><label>পরিমাণ *</label><input id="sellQty" type="number" min="0.001" step="0.001" required placeholder="0"></div>
-<div class="field"><label>প্রতি এককের বিক্রয়দর (৳) *</label><input id="sellRate" type="number" min="0" step="0.01" required placeholder="0.00"></div>
+<div class="field"><label>প্রতি এককের বিক্রয়দর (৳) *</label><input id="sellRate" type="number" min="0" step="0.01" required placeholder="0.00"></div>
 <div class="field"><label>গ্রহণ করা টাকা (৳)</label><input id="sellPaid" type="number" min="0" step="0.01" value="0"></div>
 <div class="field full"><label>নোট</label><input id="sellNote" placeholder="ঐচ্ছিক"></div>
-</div><p class="hint" id="sellTotal">মোট: ৳ 0.00</p><div class="actions"><button class="btn primary">বিক্রয় সংরক্ষণ</button></div></form></div>
+</div><p class="hint" id="sellTotal">মোট: ৳ 0.00</p><div class="actions"><button class="btn primary">বিক্রয় সংরক্ষণ</button></div></form></div>
 </section>
 <section id="parties" class="page">
-<div class="section-title"><div><h2>পার্টি হিসাব</h2><div class="sub">ক্রেতা ও সাপ্লায়ারের লেনদেন এবং বাকি</div></div></div>
-<div class="panel"><p class="hint">এই প্রাথমিক সংস্করণে প্রতিটি ক্রয়/বিক্রয়ের পার্টি নাম ও বাকি সাম্প্রতিক লেনদেনে দেখা যাবে। আলাদা পার্টি লেজার, টাকা জমা/পরিশোধ এবং স্টেটমেন্ট পরবর্তী ধাপে যুক্ত হবে।</p><div class="tablewrap"><table><thead><tr><th>পার্টির নাম</th><th>লেনদেন</th><th class="num">মোট</th><th class="num">পরিশোধ</th><th class="num">বাকি</th></tr></thead><tbody id="partyRows"></tbody></table></div></div>
+<div class="section-title"><div><h2>পার্টি হিসাব</h2><div class="sub">ক্রেতা ও সাপ্লায়ারের লেনদেন এবং বাকি</div></div></div>
+<div class="panel"><p class="hint">এই প্রাথমিক সংস্করণে প্রতিটি ক্রয়/বিক্রয়ের পার্টি নাম ও বাকি সাম্প্রতিক লেনদেনে দেখা যাবে। আলাদা পার্টি লেজার, টাকা জমা/পরিশোধ এবং স্টেটমেন্ট পরবর্তী ধাপে যুক্ত হবে।</p><div class="tablewrap"><table><thead><tr><th>পার্টির নাম</th><th>লেনদেন</th><th class="num">মোট</th><th class="num">পরিশোধ</th><th class="num">বাকি</th></tr></thead><tbody id="partyRows"></tbody></table></div></div>
 </section>
 
 <section id="ic" class="page">
-<div class="section-title"><div><h2>IC Identification</h2><div class="sub">কোড, নাম, মডেল অথবা ছবি দিয়ে IC খুঁজুন</div></div><span class="pill">GT SMART IC</span></div>
+<div class="section-title"><div><h2>IC Identification</h2><div class="sub">কোড, নাম, মডেল অথবা ছবি দিয়ে IC খুঁজুন</div></div><span class="pill">GT SMART IC</span></div>
 <div class="ic-tools">
   <div class="panel">
-    <h3>কোড / নাম / মডেল দিয়ে সার্চ</h3>
+    <h3>কোড / নাম / মডেল দিয়ে সার্চ</h3>
     <form id="icSearchForm">
       <div class="ic-search"><input id="icQuery" placeholder="যেমন: KLMCG2KCIA-041" autocomplete="off"><button class="btn primary" type="submit">সার্চ</button></div>
     </form>
@@ -182,15 +180,15 @@ footer{color:#8fa5b8}
     <div class="ic-upload">
       <div style="font-size:30px">📷</div>
       <b>IC-এর পরিষ্কার ছবি নির্বাচন করুন</b>
-      <p class="hint">চিপের গায়ের লেখা যেন পরিষ্কার ও সোজা থাকে।</p>
+      <p class="hint">চিপের গায়ের লেখা যেন পরিষ্কার ও সোজা থাকে।</p>
       <input id="icImage" type="file" accept="image/*" capture="environment">
     </div>
-    <div id="ocrStatus" class="ic-status">ছবি থেকে লেখা পড়তে OCR ব্যবহার হবে। পাওয়া কোডটি ডেটাবেজে খুঁজে দেখানো হবে; OCR ভুল করতে পারে।</div>
+    <div id="ocrStatus" class="ic-status">ছবি থেকে লেখা পড়তে OCR ব্যবহার হবে। পাওয়া কোডটি ডেটাবেজে খুঁজে দেখানো হবে; OCR ভুল করতে পারে।</div>
   </div>
 </div>
 <div class="panel">
   <h3>নিজের IC তথ্য ডেটাবেজে যোগ করুন</h3>
-  <p class="hint">নিশ্চিত তথ্য যোগ করলে পরেরবার কোড, নাম বা মডেল দিয়ে দ্রুত খুঁজে পাবেন। যাচাই না করা তথ্যকে নিশ্চিত হিসেবে সংরক্ষণ করবেন না।</p>
+  <p class="hint">নিশ্চিত তথ্য যোগ করলে পরেরবার কোড, নাম বা মডেল দিয়ে দ্রুত খুঁজে পাবেন। যাচাই না করা তথ্যকে নিশ্চিত হিসেবে সংরক্ষণ করবেন না।</p>
   <form id="icAddForm">
     <div class="ic-admin">
       <div class="field"><label>IC কোড *</label><input id="newIcCode" required placeholder="যেমন: KLMCG2KCIA-041"></div>
@@ -210,8 +208,8 @@ footer{color:#8fa5b8}
 </section>
 
 <section id="reports" class="page">
-<div class="section-title"><div><h2>রিপোর্ট</h2><div class="sub">সংরক্ষিত ক্রয় ও বিক্রয়ের সারাংশ</div></div></div>
-<div class="cards"><div class="card"><div class="metric-label">ক্রয় মোট</div><div class="metric" id="rPurchase">৳ 0</div></div><div class="card"><div class="metric-label">বিক্রয় মোট</div><div class="metric" id="rSales">৳ 0</div></div><div class="card"><div class="metric-label">ক্রয় বাকি</div><div class="metric" id="rBuyDue">৳ 0</div></div><div class="card"><div class="metric-label">বিক্রয় পাওনা</div><div class="metric" id="rSellDue">৳ 0</div></div></div>
+<div class="section-title"><div><h2>রিপোর্ট</h2><div class="sub">সংরক্ষিত ক্রয় ও বিক্রয়ের সারাংশ</div></div></div>
+<div class="cards"><div class="card"><div class="metric-label">ক্রয় মোট</div><div class="metric" id="rPurchase">৳ 0</div></div><div class="card"><div class="metric-label">বিক্রয় মোট</div><div class="metric" id="rSales">৳ 0</div></div><div class="card"><div class="metric-label">ক্রয় বাকি</div><div class="metric" id="rBuyDue">৳ 0</div></div><div class="card"><div class="metric-label">বিক্রয় পাওনা</div><div class="metric" id="rSellDue">৳ 0</div></div></div>
 <div class="panel"><h3>লেনদেনের সম্পূর্ণ তালিকা</h3><div class="tablewrap"><table><thead><tr><th>তারিখ</th><th>ধরন</th><th>পণ্য</th><th>পার্টি</th><th class="num">পরিমাণ</th><th class="num">দর</th><th class="num">মোট</th><th class="num">বাকি</th></tr></thead><tbody id="allRows"></tbody></table></div><div class="actions"><button class="btn" onclick="exportCSV()">CSV ব্যাকআপ ডাউনলোড</button></div></div>
 </section>
 <footer>KARBIX • SMART BUSINESS PARTNER • Gauchia Traders Account • বাংলাদেশি টাকা (৳)</footer>
@@ -227,19 +225,19 @@ document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',(
 function stock(p){return Number(p.opening||0)+db.transactions.filter(t=>t.productId===p.id).reduce((s,t)=>s+(t.type==='purchase'?Number(t.qty):-Number(t.qty)),0)}
 function fillSelects(){['buyProduct','sellProduct'].forEach(id=>{const el=$(id),old=el.value;el.innerHTML='<option value="">পণ্য নির্বাচন করুন</option>'+db.products.map(p=>`<option value="${p.id}">${esc(p.name)} • ${esc(p.model||p.gb||p.unit)}</option>`).join('');if(old)el.value=old})}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-$('productForm').addEventListener('submit',e=>{e.preventDefault();db.products.push({id:crypto.randomUUID(),name:$('pName').value.trim(),category:$('pCategory').value,model:$('pModel').value.trim(),gb:$('pGb').value.trim(),unit:$('pUnit').value,opening:Number($('pOpening').value||0),buy:Number($('pBuy').value||0),sell:Number($('pSell').value||0)});e.target.reset();$('pOpening').value=0;$('pBuy').value=0;$('pSell').value=0;save();alert('পণ্য সংরক্ষণ হয়েছে।')});
+$('productForm').addEventListener('submit',e=>{e.preventDefault();db.products.push({id:crypto.randomUUID(),name:$('pName').value.trim(),category:$('pCategory').value,model:$('pModel').value.trim(),gb:$('pGb').value.trim(),unit:$('pUnit').value,opening:Number($('pOpening').value||0),buy:Number($('pBuy').value||0),sell:Number($('pSell').value||0)});e.target.reset();$('pOpening').value=0;$('pBuy').value=0;$('pSell').value=0;save();alert('পণ্য সংরক্ষণ হয়েছে।')});
 function setTotal(type){let q=Number($(type+'Qty').value||0),r=Number($(type+'Rate').value||0);$(type+'Total').textContent='মোট: '+money(q*r)}
 ['buy','sell'].forEach(t=>[$(t+'Qty'),$(t+'Rate')].forEach(el=>el.addEventListener('input',()=>setTotal(t))));
 $('buyProduct').addEventListener('change',()=>{let p=db.products.find(x=>x.id===$('buyProduct').value);if(p)$('buyRate').value=p.buy||0;setTotal('buy')});
 $('sellProduct').addEventListener('change',()=>{let p=db.products.find(x=>x.id===$('sellProduct').value);if(p)$('sellRate').value=p.sell||0;setTotal('sell')});
-function addTransaction(type,e){e.preventDefault();let prefix=type==='purchase'?'buy':'sell',p=db.products.find(x=>x.id===$(prefix+'Product').value),qty=Number($(prefix+'Qty').value),rate=Number($(prefix+'Rate').value),paid=Number($(prefix+'Paid').value||0);if(!p)return alert('আগে পণ্য নির্বাচন করুন।');if(type==='sale'&&qty>stock(p))return alert('স্টকে পর্যাপ্ত পণ্য নেই। বর্তমান স্টক: '+stock(p)+' '+p.unit);let total=qty*rate;if(paid>total)return alert('পরিশোধিত টাকা মোট টাকার চেয়ে বেশি হতে পারবে না।');db.transactions.unshift({id:crypto.randomUUID(),type:type==='purchase'?'purchase':'sale',date:$(prefix+'Date').value,party:$(prefix+'Party').value.trim()||'নাম দেওয়া হয়নি',productId:p.id,product:p.name,qty,unit:p.unit,rate,total,paid,due:total-paid,note:$(prefix+'Note').value});e.target.reset();$(prefix+'Date').value=today;$(prefix+'Paid').value=0;save();alert('লেনদেন সংরক্ষণ হয়েছে।')}
+function addTransaction(type,e){e.preventDefault();let prefix=type==='purchase'?'buy':'sell',p=db.products.find(x=>x.id===$(prefix+'Product').value),qty=Number($(prefix+'Qty').value),rate=Number($(prefix+'Rate').value),paid=Number($(prefix+'Paid').value||0);if(!p)return alert('আগে পণ্য নির্বাচন করুন।');if(type==='sale'&&qty>stock(p))return alert('স্টকে পর্যাপ্ত পণ্য নেই। বর্তমান স্টক: '+stock(p)+' '+p.unit);let total=qty*rate;if(paid>total)return alert('পরিশোধিত টাকা মোট টাকার চেয়ে বেশি হতে পারবে না।');db.transactions.unshift({id:crypto.randomUUID(),type:type==='purchase'?'purchase':'sale',date:$(prefix+'Date').value,party:$(prefix+'Party').value.trim()||'নাম দেওয়া হয়নি',productId:p.id,product:p.name,qty,unit:p.unit,rate,total,paid,due:total-paid,note:$(prefix+'Note').value});e.target.reset();$(prefix+'Date').value=today;$(prefix+'Paid').value=0;save();alert('লেনদেন সংরক্ষণ হয়েছে।')}
 $('purchaseForm').addEventListener('submit',e=>addTransaction('purchase',e));$('salesForm').addEventListener('submit',e=>addTransaction('sale',e));
 
 // IC reference data: the first sample is based on information supplied by the business owner
 // and should be independently checked before making a purchase decision.
 const IC_KEY='gauchia_traders_ic_v1';
 let icDb=JSON.parse(localStorage.getItem(IC_KEY)||'null')||[
- {code:'KLMCG2KCIA-041',name:'User supplied reference',model:'Memory IC (type to verify)',gb:'64',ram:'',source:'ব্যবহারকারীর দেওয়া তথ্য; কেনাবেচার আগে যাচাই করুন'}
+ {code:'KLMCG2KCIA-041',name:'User supplied reference',model:'Memory IC (type to verify)',gb:'64',ram:'',source:'ব্যবহারকারীর দেওয়া তথ্য; কেনাবেচার আগে যাচাই করুন'}
 ];
 function saveIcDb(){localStorage.setItem(IC_KEY,JSON.stringify(icDb));renderIcRows()}
 function findIc(q){
@@ -249,8 +247,8 @@ function findIc(q){
 }
 function showIcResults(q){
  const hits=findIc(q), box=$('icResult');
- if(!hits.length){box.innerHTML='<div class="empty">এই কোড/নাম/মডেল ডেটাবেজে পাওয়া যায়নি। সঠিক তথ্য যাচাই করে নতুন IC হিসেবে যোগ করতে পারেন।</div>';return}
- box.innerHTML=hits.map(x=>`<div><div class="pill">ম্যাচ পাওয়া গেছে</div><h3 style="margin:10px 0 4px">${esc(x.code)}</h3><div class="sub">${esc(x.name||'নাম সংরক্ষিত নেই')} • ${esc(x.model||'মডেল সংরক্ষিত নেই')}</div><div class="ic-result-grid"><div class="ic-fact"><small>Storage</small><b>${x.gb?esc(x.gb)+' GB':'তথ্য নেই'}</b></div><div class="ic-fact"><small>RAM</small><b>${x.ram?esc(x.ram)+' GB':'তথ্য নেই'}</b></div><div class="ic-fact"><small>IC Name</small><b>${esc(x.name||'—')}</b></div><div class="ic-fact"><small>Source / Note</small><b>${esc(x.source||'উৎস উল্লেখ নেই')}</b></div></div><p class="ic-status">নোট: ডেটাবেজের তথ্যের নির্ভরযোগ্যতা উৎসের ওপর নির্ভর করে। শুধু কোডের মিল দেখে IC কিনবেন না; বোর্ড/ডেটাশিট দিয়ে যাচাই করুন।</p></div>`).join('<hr style="border:0;border-top:1px solid var(--line);margin:14px 0">');
+ if(!hits.length){box.innerHTML='<div class="empty">এই কোড/নাম/মডেল ডেটাবেজে পাওয়া যায়নি। সঠিক তথ্য যাচাই করে নতুন IC হিসেবে যোগ করতে পারেন।</div>';return}
+ box.innerHTML=hits.map(x=>`<div><div class="pill">ম্যাচ পাওয়া গেছে</div><h3 style="margin:10px 0 4px">${esc(x.code)}</h3><div class="sub">${esc(x.name||'নাম সংরক্ষিত নেই')} • ${esc(x.model||'মডেল সংরক্ষিত নেই')}</div><div class="ic-result-grid"><div class="ic-fact"><small>Storage</small><b>${x.gb?esc(x.gb)+' GB':'তথ্য নেই'}</b></div><div class="ic-fact"><small>RAM</small><b>${x.ram?esc(x.ram)+' GB':'তথ্য নেই'}</b></div><div class="ic-fact"><small>IC Name</small><b>${esc(x.name||'—')}</b></div><div class="ic-fact"><small>Source / Note</small><b>${esc(x.source||'উৎস উল্লেখ নেই')}</b></div></div><p class="ic-status">নোট: ডেটাবেজের তথ্যের নির্ভরযোগ্যতা উৎসের ওপর নির্ভর করে। শুধু কোডের মিল দেখে IC কিনবেন না; বোর্ড/ডেটাশিট দিয়ে যাচাই করুন।</p></div>`).join('<hr style="border:0;border-top:1px solid var(--line);margin:14px 0">');
 }
 $('icSearchForm').addEventListener('submit',e=>{e.preventDefault();showIcResults($('icQuery').value)});
 $('icAddForm').addEventListener('submit',e=>{
@@ -258,34 +256,34 @@ $('icAddForm').addEventListener('submit',e=>{
  const code=$('newIcCode').value.trim();
  if(icDb.some(x=>x.code.toLowerCase()===code.toLowerCase())){alert('এই IC কোডটি আগে থেকেই আছে।');return}
  icDb.unshift({code,name:$('newIcName').value.trim(),model:$('newIcModel').value.trim(),gb:$('newIcGb').value.trim(),ram:$('newIcRam').value.trim(),source:$('newIcSource').value.trim()});
- saveIcDb();e.target.reset();alert('IC তথ্য সংরক্ষণ হয়েছে।');
+ saveIcDb();e.target.reset();alert('IC তথ্য সংরক্ষণ হয়েছে।');
 });
 function renderIcRows(){
  $('icRows').innerHTML=icDb.map(x=>`<tr><td><b>${esc(x.code)}</b></td><td>${esc(x.name||'—')}</td><td>${esc(x.model||'—')}</td><td>${x.gb?esc(x.gb)+' GB':'—'}</td><td>${x.ram?esc(x.ram)+' GB':'—'}</td><td>${esc(x.source||'—')}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">কোনো IC তথ্য নেই।</td></tr>';
 }
 $('icImage').addEventListener('change',async e=>{
  const file=e.target.files&&e.target.files[0];if(!file)return;
- const status=$('ocrStatus');status.textContent='ছবির লেখা পড়ার প্রস্তুতি চলছে…';
+ const status=$('ocrStatus');status.textContent='ছবির লেখা পড়ার প্রস্তুতি চলছে…';
  try{
    if(!window.Tesseract){
      await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';s.onload=resolve;s.onerror=reject;document.head.appendChild(s)});
    }
-   status.textContent='ছবি থেকে IC-এর লেখা পড়া হচ্ছে…';
+   status.textContent='ছবি থেকে IC-এর লেখা পড়া হচ্ছে…';
    const result=await Tesseract.recognize(file,'eng');
    const raw=(result.data.text||'').trim();
    const tokens=raw.split(/\s+/).filter(Boolean);
    const candidate=tokens.sort((a,b)=>b.length-a.length)[0]||'';
-   status.textContent='OCR-এ পাওয়া লেখা: '+(raw||'কোনো লেখা পড়া যায়নি')+'. নিচের বক্সে কোডটি ঠিক করে সার্চ করুন।';
+   status.textContent='OCR-এ পাওয়া লেখা: '+(raw||'কোনো লেখা পড়া যায়নি')+'. নিচের বক্সে কোডটি ঠিক করে সার্চ করুন।';
    if(candidate){$('icQuery').value=candidate;showIcResults(candidate)}
  }catch(err){
-   status.textContent='এই মুহূর্তে ছবি থেকে লেখা পড়া যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন, অথবা IC-এর গায়ের লেখা নিজে টাইপ করে সার্চ করুন।';
+   status.textContent='এই মুহূর্তে ছবি থেকে লেখা পড়া যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন, অথবা IC-এর গায়ের লেখা নিজে টাইপ করে সার্চ করুন।';
  }
 });
 
 function render(){fillSelects();$('mProducts').textContent=db.products.length;$('mStock').textContent=db.products.filter(p=>p.unit==='পিস').reduce((s,p)=>s+stock(p),0).toLocaleString('en-BD');let buys=db.transactions.filter(t=>t.type==='purchase'),sales=db.transactions.filter(t=>t.type==='sale'),bt=buys.reduce((s,t)=>s+t.total,0),st=sales.reduce((s,t)=>s+t.total,0);$('mPurchase').textContent=money(bt);$('mSales').textContent=money(st);$('rPurchase').textContent=money(bt);$('rSales').textContent=money(st);$('rBuyDue').textContent=money(buys.reduce((s,t)=>s+t.due,0));$('rSellDue').textContent=money(sales.reduce((s,t)=>s+t.due,0));
-$('productRows').innerHTML=db.products.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.category)}</td><td>${esc([p.model,p.gb].filter(Boolean).join(' / ')||'—')}</td><td>${esc(p.unit)}</td><td class="num">${stock(p).toLocaleString('en-BD')}</td><td class="num">${money(p.buy)}</td><td class="num">${money(p.sell)}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">এখনো কোনো পণ্য যোগ করা হয়নি।</td></tr>';
-const rows=db.transactions.map(t=>`<tr><td>${esc(t.date)}</td><td><span class="pill">${t.type==='purchase'?'ক্রয়':'বিক্রয়'}</span></td><td>${esc(t.product)}</td><td>${esc(t.party)}</td><td class="num">${t.qty} ${esc(t.unit)}</td><td class="num">${money(t.rate)}</td><td class="num">${money(t.total)}</td><td class="num">${money(t.due)}</td></tr>`).join('')||'<tr><td colspan="8" class="empty">কোনো লেনদেন নেই।</td></tr>';$('allRows').innerHTML=rows;
-$('recent').innerHTML=db.transactions.slice(0,7).map(t=>`<tr><td>${esc(t.date)}</td><td>${t.type==='purchase'?'ক্রয়':'বিক্রয়'}</td><td>${esc(t.product)}</td><td>${esc(t.party)}</td><td class="num">${t.qty} ${esc(t.unit)}</td><td class="num">${money(t.total)}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">এখনো কোনো লেনদেন নেই।</td></tr>';
+$('productRows').innerHTML=db.products.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.category)}</td><td>${esc([p.model,p.gb].filter(Boolean).join(' / ')||'—')}</td><td>${esc(p.unit)}</td><td class="num">${stock(p).toLocaleString('en-BD')}</td><td class="num">${money(p.buy)}</td><td class="num">${money(p.sell)}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">এখনো কোনো পণ্য যোগ করা হয়নি।</td></tr>';
+const rows=db.transactions.map(t=>`<tr><td>${esc(t.date)}</td><td><span class="pill">${t.type==='purchase'?'ক্রয়':'বিক্রয়'}</span></td><td>${esc(t.product)}</td><td>${esc(t.party)}</td><td class="num">${t.qty} ${esc(t.unit)}</td><td class="num">${money(t.rate)}</td><td class="num">${money(t.total)}</td><td class="num">${money(t.due)}</td></tr>`).join('')||'<tr><td colspan="8" class="empty">কোনো লেনদেন নেই।</td></tr>';$('allRows').innerHTML=rows;
+$('recent').innerHTML=db.transactions.slice(0,7).map(t=>`<tr><td>${esc(t.date)}</td><td>${t.type==='purchase'?'ক্রয়':'বিক্রয়'}</td><td>${esc(t.product)}</td><td>${esc(t.party)}</td><td class="num">${t.qty} ${esc(t.unit)}</td><td class="num">${money(t.total)}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">এখনো কোনো লেনদেন নেই।</td></tr>';
 let parties={};db.transactions.forEach(t=>{let x=parties[t.party]||(parties[t.party]={count:0,total:0,paid:0,due:0});x.count++;x.total+=t.total;x.paid+=t.paid;x.due+=t.due});$('partyRows').innerHTML=Object.entries(parties).map(([n,x])=>`<tr><td>${esc(n)}</td><td>${x.count}</td><td class="num">${money(x.total)}</td><td class="num">${money(x.paid)}</td><td class="num">${money(x.due)}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">এখনো কোনো পার্টি নেই।</td></tr>';
 }
 function exportCSV(){let lines=[['Date','Type','Product','Party','Quantity','Unit','Rate BDT','Total BDT','Paid BDT','Due BDT'],...db.transactions.map(t=>[t.date,t.type,t.product,t.party,t.qty,t.unit,t.rate,t.total,t.paid,t.due])];let csv='\uFEFF'+lines.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='gauchia-traders-backup.csv';a.click();URL.revokeObjectURL(a.href)}
